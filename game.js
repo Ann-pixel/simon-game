@@ -8,7 +8,7 @@ var started = false;
 var level = 0;
 
 // starting the game-
-$("#level-title").on("swiperight", function () {
+$("#level-title").bind("taphold", function () {
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
