@@ -46,6 +46,7 @@ function checkAnswer(currentLevel) {
       $("body").removeClass("game-over"), 200;
     });
     $(document).keydown(startOver());
+    $(document).on("swiperight", startOver());
   }
 }
 
