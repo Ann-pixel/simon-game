@@ -8,7 +8,13 @@ var started = false;
 var level = 0;
 
 // starting the game-
-
+$("#level-title").on("swiperight", function () {
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
+});
 $(document).keypress(function () {
   if (!started) {
     $("#level-title").text("Level " + level);
