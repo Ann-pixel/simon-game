@@ -8,13 +8,7 @@ var started = false;
 var level = 0;
 
 // starting the game-
-$("#level-title").bind("taphold", function () {
-  if (!started) {
-    $("#level-title").text("Level " + level);
-    nextSequence();
-    started = true;
-  }
-});
+
 $(document).keypress(function () {
   if (!started) {
     $("#level-title").text("Level " + level);
@@ -52,7 +46,6 @@ function checkAnswer(currentLevel) {
       $("body").removeClass("game-over"), 200;
     });
     $(document).keydown(startOver());
-    $(document).on("swiperight", startOver());
   }
 }
 
